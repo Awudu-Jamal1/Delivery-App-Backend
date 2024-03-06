@@ -15,11 +15,11 @@ module.exports = {
   async register(req, res) {
 
     try {
-      console.log(req.body);
       const { role, firstName, lastName, email, password, phone, address } =
         req.body.user.User;
       const roles = req.body.user.roles;
 
+      console.log(role);
       const salt = await bcrypt.genSalt(10);
       const pass = await bcrypt.hash(password, salt);
       const contact = parseInt(phone);
