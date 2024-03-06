@@ -24,9 +24,9 @@ module.exports = {
       const pass = await bcrypt.hash(password, salt);
       const contact = parseInt(phone);
       const user = await User.create({
-        role: role,
         firstName: firstName,
         lastName: lastName,
+        role: role,
         email: email,
         password: pass,
         phone: contact,
