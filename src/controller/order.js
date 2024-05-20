@@ -40,7 +40,7 @@ module.exports = {
   async getAll(req, res) {
     try {
       const orders = await Order.findAll({
-        where: { status: 1 },
+        where: { status: "1"},
         include: [Order_Item]
       });
       console.log(orders)
