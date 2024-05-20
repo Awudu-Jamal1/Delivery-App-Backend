@@ -74,7 +74,7 @@ module.exports = {
 
       const orders = await Order.findAll({
         where: {
-          status: { [Op.or]: [1, 2, 3, 4] },
+          status: { [Op.or]: ["1", "2", "3","4"] },
           [roleField]: Id
         },
         include: [
@@ -108,7 +108,7 @@ module.exports = {
       const { id } = req.query;
       const orders = await Order.findAll({
         where: {
-          status: { [Op.or]: [2, 3] },
+          status: { [Op.or]: ["2", "3"] },
           agent_id: id
         },
         include: [Order_Item]
