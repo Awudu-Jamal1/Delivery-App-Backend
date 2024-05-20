@@ -68,7 +68,7 @@ let wallet =await Wallet.create({
 
   async login(req, res) {
     try {
-      console.log(req.body)
+      console.log("edt" ,req.body)
       const { role, email, password } = req.body;
       console.log(role)
       let roles;
