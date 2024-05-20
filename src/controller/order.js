@@ -43,6 +43,7 @@ module.exports = {
         where: { status: 1 },
         include: [Order_Item]
       });
+      console.log(orders)
 
       return res.send({ orders });
     } catch (error) {
